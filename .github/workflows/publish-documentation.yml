@@ -1,0 +1,50 @@
+# Build documentation and test reports and publish them on
+# github pages
+
+name: publish-documentation
+on:
+  push:
+    branches:
+      master
+
+# While some jobs should be parallisable, it was opted not to parallelise
+# since jobs run on different machines on github actions, and there is
+# no build in support for paralellising steps.
+jobs:
+
+  build_documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the master branch
+        uses: actions/checkout@v3
+
+      - name: Install Doxygen and lcov
+        run: sudo apt-get install doxygen lcov -y
+
+      - name: Install Sphinx
+        run: pip3 install breathe exhale sphinx sphinx-rtd-theme sphinx-rtd-dark-mode
+
+      - name: Build all main, tests and documentation
+        run: sh ./scripts/build/all.sh
+
+      - name: Run tests
+        run: sh ./scripts/standalone/test.sh
+
+      - name: Setup documentation git repository
+        run: |
+          cd docs/
+          touch .nojekyll
+          rm .gitignore
+          git init
+          git add .
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'deploy'
+
+      - name: Push to github pages
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: ./docs/

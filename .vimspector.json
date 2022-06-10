@@ -1,0 +1,44 @@
+{
+    "configurations": {
+        "main": {
+            "adapter": "vscode-cpptools",
+            "filetypes": [
+                "cpp",
+                "c",
+                "cu",
+                "objc",
+                "rust"
+            ],
+            "configuration": {
+                "request": "launch",
+                "program": "${workspaceRoot}/build/bin/main",
+                "args": [],
+                "cwd": "${workspaceRoot}",
+                "environment": [],
+                "externalConsole": true,
+                "MIMode": "gdb",
+                "stopAtEntry": true
+            }
+        },
+        "test": {
+            "adapter": "vscode-cpptools",
+            "filetypes": [
+                "cpp",
+                "c",
+                "cu",
+                "objc",
+                "rust"
+            ],
+            "configuration": {
+                "request": "launch",
+                "program": "${workspaceRoot}/build/bin/test",
+                "args": [],
+                "cwd": "${workspaceRoot}",
+                "environment": [],
+                "externalConsole": true,
+                "MIMode": "gdb",
+                "stopAtEntry": true
+            }
+        }
+    }
+}
