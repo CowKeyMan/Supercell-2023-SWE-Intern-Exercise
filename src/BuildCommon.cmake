@@ -20,16 +20,32 @@ include(FetchContent)
 FetchContent_Declare(
   json
   GIT_REPOSITORY  https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent
-  GIT_PROGRESS    TRUE
-  GIT_SHALLOW     TRUE
   GIT_TAG         v3.11.2
+  GIT_SHALLOW     TRUE
 )
 FetchContent_MakeAvailable(json)
 
+FetchContent_Declare(
+  fmt
+  QUIET
+  GIT_REPOSITORY       https://github.com/fmtlib/fmt.git
+  GIT_TAG              9.1.0
+  GIT_SHALLOW          TRUE
+)
+FetchContent_MakeAvailable(fmt)
 
 add_library(
   users
   "${PROJECT_SOURCE_DIR}/User/User.cpp"
+)
+add_library(
+  io_utils
+  "${PROJECT_SOURCE_DIR}/Utils/IOUtils.cpp"
+)
+target_link_libraries(io_utils PRIVATE fmt::fmt)
+add_library(
+  file_iterator
+  "${PROJECT_SOURCE_DIR}/FileIterator/FileIterator.cpp"
 )
 
 # target_link_libraries(foo PRIVATE nlohmann_json::nlohmann_json)
@@ -43,5 +59,9 @@ target_link_libraries(
   INTERFACE
 
   users
+  io_utils
+  file_iterator
+
+  fmt::fmt
   # TODO: Combine more libraries that you create
 )

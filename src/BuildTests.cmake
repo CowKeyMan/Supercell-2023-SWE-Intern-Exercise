@@ -30,7 +30,10 @@ add_executable(
   test
   "${PROJECT_SOURCE_DIR}/test_main.cpp"
 
+  "${PROJECT_SOURCE_DIR}/Utils/IOUtils_test.cpp"
+
   "${PROJECT_SOURCE_DIR}/User/User_test.cpp"
+  "${PROJECT_SOURCE_DIR}/FileIterator/FileIterator_test.cpp"
 
   # TODO: add more tests sources here
 )
