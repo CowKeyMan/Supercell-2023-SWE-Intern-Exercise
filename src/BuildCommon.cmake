@@ -5,6 +5,8 @@
 # Any common options are put as an interface
 # rather than putting it with each file individually
 
+include_directories("${PROJECT_SOURCE_DIR}")
+
 add_compile_options(
   "$<$<CONFIG:Debug>:--coverage>" # only in debug mode
 )
@@ -13,14 +15,24 @@ add_compile_options(
 )
 link_libraries(gcov)
 
+include(FetchContent)
+
+FetchContent_Declare(
+  json
+  GIT_REPOSITORY  https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent
+  GIT_PROGRESS    TRUE
+  GIT_SHALLOW     TRUE
+  GIT_TAG         v3.11.2
+)
+FetchContent_MakeAvailable(json)
+
+
 add_library(
-  functions
-  "${PROJECT_SOURCE_DIR}/Functions/Functions.cpp"
+  users
+  "${PROJECT_SOURCE_DIR}/User/User.cpp"
 )
-target_include_directories(
-  functions PUBLIC "${PROJECT_SOURCE_DIR}/Functions"
-)
-enable_warnings(functions "PRIVATE")
+
+# target_link_libraries(foo PRIVATE nlohmann_json::nlohmann_json)
 
 # TODO: Add more cpu libraries here
 
@@ -30,6 +42,6 @@ target_link_libraries(
   common_libraries
   INTERFACE
 
-  functions
+  users
   # TODO: Combine more libraries that you create
 )

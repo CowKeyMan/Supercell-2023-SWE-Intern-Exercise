@@ -11,6 +11,8 @@ project(
   LANGUAGES CXX
 )
 
+set(CMAKE_CXX_STANDARD 17)
+
 include(cmake/ExportCompileCommands.cmake)
 include(cmake/PreventBuildingInCmakeDirectory.cmake)
 include(cmake/StaticAnalyzers.cmake)

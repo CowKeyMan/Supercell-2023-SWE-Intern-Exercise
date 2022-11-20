@@ -30,7 +30,7 @@ add_executable(
   test
   "${PROJECT_SOURCE_DIR}/test_main.cpp"
 
-  "${PROJECT_SOURCE_DIR}/Functions/Functions_test.cpp"
+  "${PROJECT_SOURCE_DIR}/User/User_test.cpp"
 
   # TODO: add more tests sources here
 )
