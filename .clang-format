@@ -35,7 +35,7 @@ ConstructorInitializerIndentWidth: 2
 ContinuationIndentWidth: 2
 Cpp11BracedListStyle: true
 DeriveLineEnding: false
-FixNamespaceComments: false
+FixNamespaceComments: true
 IncludeBlocks: Regroup
 IncludeCategories:
   - Regex:           '<[[:alnum:].]+>'
