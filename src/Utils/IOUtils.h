@@ -17,16 +17,17 @@ using std::string;
 namespace io_utils {
 
 class ThrowingIfstream: public ifstream {
-  public:
-    ThrowingIfstream(const string &filename, ios_base::openmode mode = ios_base::in);
-    ThrowingIfstream(const string &&filename, ios_base::openmode mode = ios_base::in);
-    static void check_file_exists(const string filename);
+public:
+  ThrowingIfstream(
+    const string &filename, ios_base::openmode mode = ios_base::in
+  );
+  static void check_file_exists(const string filename);
 };
 
 class ThrowingOfstream: public ofstream {
-  public:
-    ThrowingOfstream(const string filepath, ios_base::openmode mode);
-    static void check_path_valid(const string filepath);
+public:
+  ThrowingOfstream(const string filepath, ios_base::openmode mode);
+  static void check_path_valid(const string filepath);
 };
 
 }  // namespace io_utils

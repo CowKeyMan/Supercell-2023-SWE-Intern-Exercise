@@ -1,5 +1,3 @@
-#include <ios>
-
 #include "Utils/IOUtils.h"
 #include "fmt/core.h"
 
@@ -10,19 +8,9 @@ using std::string;
 namespace io_utils {
 
 using std::ifstream;
-using std::ios_base;
 
 ThrowingIfstream::ThrowingIfstream(
   const string &filename, ios_base::openmode mode
-):
-  ifstream(filename, mode) {
-  if (this->fail()) {
-    throw ios::failure(format("The input file {} cannot be opened", filename));
-  }
-}
-
-ThrowingIfstream::ThrowingIfstream(
-  const string &&filename, ios_base::openmode mode
 ):
   ifstream(filename, mode) {
   if (this->fail()) {
