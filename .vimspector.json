@@ -1,6 +1,6 @@
 {
     "configurations": {
-        "main": {
+        "task1": {
             "adapter": "vscode-cpptools",
             "filetypes": [
                 "cpp",
@@ -11,10 +11,36 @@
             ],
             "configuration": {
                 "request": "launch",
-                "program": "${workspaceRoot}/build/bin/main",
-                "args": [],
+                "program": "${workspaceRoot}/build/bin/task1",
+                "args": [
+                    "test_objects/ex1/input1.txt"
+                ],
                 "cwd": "${workspaceRoot}",
                 "environment": [],
+                "externalConsole": true,
+                "MIMode": "gdb",
+                "stopAtEntry": true
+            }
+        },
+        "task2": {
+            "adapter": "vscode-cpptools",
+            "filetypes": [
+                "cpp",
+                "c",
+                "cu",
+                "objc",
+                "rust"
+            ],
+            "configuration": {
+                "request": "launch",
+                "program": "${workspaceRoot}/build/bin/task2",
+                "args": [
+                    "test_objects/ex2/input2.txt"
+                ],
+                "cwd": "${workspaceRoot}",
+                "environment": [
+                  {"name": "OMP_NUM_THREADS", "value": "1"}
+                ],
                 "externalConsole": true,
                 "MIMode": "gdb",
                 "stopAtEntry": true
