@@ -7,8 +7,8 @@
 #include "FileLineIterator/FileLineIterator.h"
 
 using std::move;
-using std::vector;
 using std::string;
+using std::vector;
 
 namespace friend_network {
 

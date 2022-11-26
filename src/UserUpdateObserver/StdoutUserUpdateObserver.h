@@ -11,8 +11,8 @@
 #include "User/User.h"
 #include "Utils/ObserverPattern.h"
 
-using std::cout;
 using design_utils::Observer;
+using std::cout;
 
 namespace friend_network {
 

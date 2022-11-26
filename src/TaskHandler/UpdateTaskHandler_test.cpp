@@ -27,5 +27,7 @@ void update_task_handler_test(
 }
 
 TEST(UpdateTaskHandler, Test1) {
-  update_task_handler_test("test_objects/ex2/input1.txt", "test_objects/ex2/output1.txt");
+  update_task_handler_test(
+    "test_objects/ex2/input1.txt", "test_objects/ex2/output1.txt"
+  );
 }

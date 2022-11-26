@@ -1,5 +1,6 @@
 #include <memory>
 #include <utility>
+
 #include "User/UserMap.h"
 
 using namespace friend_network;

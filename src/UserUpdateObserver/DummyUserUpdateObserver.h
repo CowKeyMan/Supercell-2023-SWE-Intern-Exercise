@@ -6,8 +6,9 @@
  * @brief
  */
 
-#include "User/User.h"
 #include <vector>
+
+#include "User/User.h"
 
 using std::vector;
 

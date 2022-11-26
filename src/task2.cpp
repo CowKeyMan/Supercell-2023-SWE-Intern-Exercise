@@ -35,5 +35,4 @@ auto main(int, char **argv) -> int {
   cout << "ERAF";
 
   cout << name_to_user->to_json() << '\n';
-
 }

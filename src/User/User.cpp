@@ -8,9 +8,7 @@ using std::string;
 
 using namespace friend_network;
 
-User::User(const string &_name): name(_name) {
-  omp_init_lock(update_mutex);
-};
+User::User(const string &_name): name(_name) { omp_init_lock(update_mutex); };
 
 User::~User() { omp_destroy_lock(update_mutex); };
 

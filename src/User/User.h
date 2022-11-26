@@ -7,9 +7,9 @@
  */
 
 #include <map>
+#include <omp.h>
 #include <set>
 #include <string>
-#include <omp.h>
 
 #include <nlohmann/json.hpp>
 
@@ -41,8 +41,8 @@ private:
 public:
   static shared_ptr<Observer<json>> broadcast_observer;
   User(const string &_name);
-  User(User&) = delete;
-  User(User&&) = delete;
+  User(User &) = delete;
+  User(User &&) = delete;
   auto get_name() -> const string &;
   auto add_friend(const string &friend_name) -> void;
   auto remove_friend(const string &friend_name) -> void;
