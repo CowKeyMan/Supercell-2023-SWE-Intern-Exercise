@@ -4,10 +4,11 @@
 #include <gtest/gtest.h>
 #include <type_traits>
 
-#include "FileIterator/FileIterator.h"
+#include "FileLineIterator/FileLineIterator.h"
 
 using std::move;
 using std::vector;
+using std::string;
 
 namespace friend_network {
 
@@ -19,11 +20,11 @@ TEST(FileIteratorTest, TestIterator) {
     R"({ "type": "update", "user": "ab", "timestamp": 100, "values": { "foo": "bar" }})",
     R"({ "type": "update", "user": "ab", "timestamp": 101, "values": { "foo": "bar" }})",
     R"({ "type": "update", "user": "ab", "timestamp": 102, "values": { "foo": "barf" }})"};
-  auto fi = FileIterator("test_objects/ex1/input1.txt");
+  auto fi = FileLineIterator("test_objects/ex1/input1.txt");
   vector<string> actual;
   string buffer;
-  while(fi >> buffer) { actual.push_back(move(buffer)); }
+  while (fi >> buffer) { actual.push_back(move(buffer)); }
   EXPECT_EQ(expected, actual);
 }
 
-}
+}  // namespace friend_network

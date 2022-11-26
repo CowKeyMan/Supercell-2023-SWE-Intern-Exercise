@@ -1,8 +1,8 @@
-#ifndef FILE_ITERATOR_H
-#define FILE_ITERATOR_H
+#ifndef FILE_LINE_ITERATOR_H
+#define FILE_LINE_ITERATOR_H
 
 /**
- * @file FileIterator.h
+ * @file FileLineIterator.h
  * @brief Takes a filename as input and serves it line by line
  */
 
@@ -15,16 +15,15 @@ using std::string;
 
 namespace friend_network {
 
-class FileIterator {
+class FileLineIterator {
 private:
   ThrowingIfstream stream;
 
 public:
-  FileIterator(string &filename);
-  FileIterator(string &&filename);
+  FileLineIterator(const string &filename);
   auto operator>>(string &output) -> bool;
 };
 
-}
+}  // namespace friend_network
 
 #endif
