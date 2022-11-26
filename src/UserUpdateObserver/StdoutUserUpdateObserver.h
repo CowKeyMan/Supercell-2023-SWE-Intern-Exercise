@@ -9,8 +9,10 @@
 #include <iostream>
 
 #include "User/User.h"
+#include "Utils/ObserverPattern.h"
 
 using std::cout;
+using design_utils::Observer;
 
 namespace friend_network {
 

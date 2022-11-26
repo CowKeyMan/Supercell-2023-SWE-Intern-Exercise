@@ -54,6 +54,7 @@ add_library(
   file_line_iterator
   "${PROJECT_SOURCE_DIR}/FileLineIterator/FileLineIterator.cpp"
 )
+target_link_libraries(file_line_iterator PRIVATE io_utils)
 add_library(
   friends_task_handler
   "${PROJECT_SOURCE_DIR}/TaskHandler/FriendsTaskHandler.cpp"

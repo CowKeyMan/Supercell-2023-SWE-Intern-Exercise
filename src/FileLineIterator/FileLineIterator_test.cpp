@@ -25,6 +25,7 @@ TEST(FileIteratorTest, TestIterator) {
   string buffer;
   while (fi >> buffer) { actual.push_back(move(buffer)); }
   EXPECT_EQ(expected, actual);
+  EXPECT_EQ(fi >> buffer, false);
 }
 
 }  // namespace friend_network

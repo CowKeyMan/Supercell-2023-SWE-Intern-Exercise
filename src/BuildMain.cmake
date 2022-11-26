@@ -4,10 +4,10 @@ option(BUILD_MAIN "Build the main targets" ON)
 
 if (BUILD_MAIN)
 
-add_executable(main main.cpp)
+add_executable(task1 "${PROJECT_SOURCE_DIR}/task1.cpp")
 target_link_libraries(
-  main PRIVATE common_libraries
+  task1 PRIVATE common_libraries
 )
-enable_warnings(main "PRIVATE")
+enable_warnings(task1 "PRIVATE")
 
 endif()
