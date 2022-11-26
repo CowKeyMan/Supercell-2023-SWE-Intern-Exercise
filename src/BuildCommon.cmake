@@ -17,6 +17,9 @@ link_libraries(gcov)
 
 include(FetchContent)
 
+find_package(OpenMP REQUIRED)
+add_compile_options("$<$<COMPILE_LANGUAGE:CUDA>:-Xcompiler=-fopenmp>")
+
 FetchContent_Declare(
   json
   GIT_REPOSITORY  https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent
@@ -43,7 +46,7 @@ add_library(
   user
   "${PROJECT_SOURCE_DIR}/User/User.cpp"
 )
-target_link_libraries(user PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(user PRIVATE nlohmann_json::nlohmann_json OpenMP::OpenMP_CXX)
 add_library(
   user_map
   "${PROJECT_SOURCE_DIR}/User/UserMap.cpp"
@@ -54,12 +57,17 @@ add_library(
   file_line_iterator
   "${PROJECT_SOURCE_DIR}/FileLineIterator/FileLineIterator.cpp"
 )
-target_link_libraries(file_line_iterator PRIVATE io_utils)
+target_link_libraries(file_line_iterator PRIVATE io_utils OpenMP::OpenMP_CXX)
 add_library(
   friends_task_handler
   "${PROJECT_SOURCE_DIR}/TaskHandler/FriendsTaskHandler.cpp"
 )
 target_link_libraries(friends_task_handler PRIVATE user_map nlohmann_json::nlohmann_json user)
+add_library(
+  update_task_handler
+  "${PROJECT_SOURCE_DIR}/TaskHandler/UpdateTaskHandler.cpp"
+)
+target_link_libraries(update_task_handler PRIVATE user_map nlohmann_json::nlohmann_json user)
 
 # TODO: Add more cpu libraries here
 
@@ -74,8 +82,10 @@ target_link_libraries(
   user_map
   file_line_iterator
   friends_task_handler
+  update_task_handler
 
   fmt::fmt
   nlohmann_json::nlohmann_json
+  OpenMP::OpenMP_CXX
   # TODO: Combine more libraries that you create
 )

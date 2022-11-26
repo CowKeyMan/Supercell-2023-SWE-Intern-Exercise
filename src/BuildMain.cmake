@@ -10,4 +10,10 @@ target_link_libraries(
 )
 enable_warnings(task1 "PRIVATE")
 
+add_executable(task2 "${PROJECT_SOURCE_DIR}/task2.cpp")
+target_link_libraries(
+  task2 PRIVATE common_libraries
+)
+enable_warnings(task2 "PRIVATE")
+
 endif()
