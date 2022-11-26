@@ -1,4 +1,3 @@
-
 #include <memory>
 #include <tuple>
 #include <vector>
@@ -6,6 +5,7 @@
 #include <gtest/gtest.h>
 
 #include "User/User.h"
+#include "User/User_test.h"
 
 using std::make_shared;
 using std::make_tuple;
@@ -44,20 +44,22 @@ TEST(UserTest, ManageValues) {
   EXPECT_EQ(a.get_value_json(), json({{"A", "A1"}, {"B", "B0"}}));
 }
 
-class DummyUserObserver: public Observer<json> {
-public:
-  vector<json> jsons;
-  void update(const json &data) override { jsons.push_back(data); };
-};
-
 TEST(UserTest, Broadcast) {
   auto observer = make_shared<DummyUserObserver>();
   User::broadcast_observer = observer;
   auto expected = vector<json>(
-    {{{"broadcast", {"B"}}, {"timestamp", 0}, {"values", {{"B", "B0"}}}},
-     {{"broadcast", {"B", "C"}},
-      {"timestamp", 2},
-      {"values", {{"A", "A2"}, {"C", "C2"}}}}}
+    {json(
+       {{"broadcast", {"B"}},
+        {"user", "A"},
+        {"timestamp", 0},
+        {"values", {{"B", "B0"}}}}
+     ),
+     json(
+       {{"broadcast", {"B", "C"}},
+        {"user", "A"},
+        {"timestamp", 2},
+        {"values", {{"A", "A2"}, {"C", "C2"}}}}
+     )}
   );
 
   auto a = User("A");

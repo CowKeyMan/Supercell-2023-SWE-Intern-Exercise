@@ -2,6 +2,7 @@
 #include <string>
 
 #include "User/User.h"
+#include "nlohmann/json.hpp"
 
 using std::string;
 
@@ -25,7 +26,7 @@ auto User::update_values(const json &new_values, u64 timestamp) -> void {
   for (auto &[key, value] : new_values.items()) {
     if (
       !values.contains(key)
-      || (values.contains(key) && values[key].timestamp < timestamp && values[key].value != value)
+      || (values.contains(key) && values[key].timestamp < timestamp)
     ) {
       values[key] = {value, timestamp};
     }
@@ -43,7 +44,7 @@ auto User::update_values_notify(const json &new_values, u64 timestamp) -> void {
   for (auto &[key, value] : new_values.items()) {
     if (
       !values.contains(key)
-      || (values.contains(key) && values[key].timestamp < timestamp && values[key].value != value)
+      || (values.contains(key) && values[key].timestamp < timestamp)
     ) {
       values[key] = {value, timestamp};
       broadcast_json["values"][key] = value;
@@ -52,6 +53,7 @@ auto User::update_values_notify(const json &new_values, u64 timestamp) -> void {
   if (!broadcast_json.empty()) {
     broadcast_json["broadcast"] = friends;
     broadcast_json["timestamp"] = timestamp;
+    broadcast_json["user"] = name;
     broadcast_observer->update(broadcast_json);
   }
 }

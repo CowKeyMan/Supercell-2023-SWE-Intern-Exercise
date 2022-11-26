@@ -6,21 +6,20 @@
  * @brief Class containing user data and functions
  */
 
+#include <map>
+#include <set>
 #include <string>
 
 #include <nlohmann/json.hpp>
-#include <map>
-#include <set>
 
-#include "Utils/ObserverPattern.h"
 #include "Utils/ObserverPattern.h"
 #include "Utils/TypeDefinitions.h"
 
 using design_utils::Observer;
 using nlohmann::json;
-using std::string;
 using std::map;
 using std::set;
+using std::string;
 
 namespace friend_network {
 
@@ -49,6 +48,5 @@ public:
 };
 
 }  // namespace friend_network
-
 
 #endif
