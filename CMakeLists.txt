@@ -11,7 +11,7 @@ project(
   LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 include(cmake/ExportCompileCommands.cmake)
 include(cmake/PreventBuildingInCmakeDirectory.cmake)

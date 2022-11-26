@@ -5,7 +5,7 @@
 #include <gtest/gtest.h>
 
 #include "User/User.h"
-#include "User/User_test.h"
+#include "UserUpdateObserver/DummyUserUpdateObserver.h"
 
 using std::make_shared;
 using std::make_tuple;
@@ -45,7 +45,7 @@ TEST(UserTest, ManageValues) {
 }
 
 TEST(UserTest, Broadcast) {
-  auto observer = make_shared<DummyUserObserver>();
+  auto observer = make_shared<DummyUserUpdateObserver>();
   User::broadcast_observer = observer;
   auto expected = vector<json>(
     {json(

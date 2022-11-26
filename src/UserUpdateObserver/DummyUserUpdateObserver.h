@@ -1,9 +1,9 @@
-#ifndef USER_TEST_H
-#define USER_TEST_H
+#ifndef DUMMY_USER_UPDATE_OBSERVER_H
+#define DUMMY_USER_UPDATE_OBSERVER_H
 
 /**
- * @file User_test.h
- * @brief Collection of objects used for testing the user class
+ * @file DummyUserUpdateObserver.h
+ * @brief
  */
 
 #include "User/User.h"
@@ -11,7 +11,7 @@
 
 using std::vector;
 
-class DummyUserObserver: public Observer<json> {
+class DummyUserUpdateObserver: public Observer<json> {
 public:
   vector<json> jsons;
   void update(const json &data) override { jsons.push_back(data); };

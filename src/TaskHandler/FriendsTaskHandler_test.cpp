@@ -7,7 +7,7 @@
 #include "TaskHandler/FriendsTaskHandler.h"
 #include "User/User.h"
 #include "User/UserMap.h"
-#include "User/User_test.h"
+#include "UserUpdateObserver/DummyUserUpdateObserver.h"
 
 using namespace friend_network;
 using nlohmann::json;
@@ -17,7 +17,7 @@ void test(const string &input_file, const string &output_file) {
   auto name_to_user = make_shared<UserMap>();
   auto input_iterator = make_shared<FileLineIterator>(input_file);
   auto output_iterator = make_shared<FileLineIterator>(output_file);
-  auto user_observer = make_shared<DummyUserObserver>();
+  auto user_observer = make_shared<DummyUserUpdateObserver>();
   User::broadcast_observer = user_observer;
 
   FriendsTaskHandler(input_iterator, name_to_user).read_and_process_tasks();
@@ -33,4 +33,12 @@ void test(const string &input_file, const string &output_file) {
 
 TEST(FriendsTaskHandler, Test1) {
   test("test_objects/ex1/input1.txt", "test_objects/ex1/output1.txt");
+}
+
+TEST(FriendsTaskHandler, Test2) {
+  test("test_objects/ex1/input2.txt", "test_objects/ex1/output2.txt");
+}
+
+TEST(FriendsTaskHandler, Test3) {
+  test("test_objects/ex1/input3.txt", "test_objects/ex1/output3.txt");
 }

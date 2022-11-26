@@ -35,20 +35,30 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(fmt)
 
 add_library(
-  users
-  "${PROJECT_SOURCE_DIR}/User/User.cpp"
-)
-add_library(
   io_utils
   "${PROJECT_SOURCE_DIR}/Utils/IOUtils.cpp"
 )
+
+add_library(
+  user
+  "${PROJECT_SOURCE_DIR}/User/User.cpp"
+)
+target_link_libraries(user PRIVATE nlohmann_json::nlohmann_json)
+add_library(
+  user_map
+  "${PROJECT_SOURCE_DIR}/User/UserMap.cpp"
+)
+target_link_libraries(user_map PRIVATE nlohmann_json::nlohmann_json)
 target_link_libraries(io_utils PRIVATE fmt::fmt)
 add_library(
-  file_iterator
-  "${PROJECT_SOURCE_DIR}/FileIterator/FileIterator.cpp"
+  file_line_iterator
+  "${PROJECT_SOURCE_DIR}/FileLineIterator/FileLineIterator.cpp"
 )
-
-# target_link_libraries(foo PRIVATE nlohmann_json::nlohmann_json)
+add_library(
+  friends_task_handler
+  "${PROJECT_SOURCE_DIR}/TaskHandler/FriendsTaskHandler.cpp"
+)
+target_link_libraries(friends_task_handler PRIVATE user_map nlohmann_json::nlohmann_json user)
 
 # TODO: Add more cpu libraries here
 
@@ -58,10 +68,13 @@ target_link_libraries(
   common_libraries
   INTERFACE
 
-  users
   io_utils
-  file_iterator
+  user
+  user_map
+  file_line_iterator
+  friends_task_handler
 
   fmt::fmt
+  nlohmann_json::nlohmann_json
   # TODO: Combine more libraries that you create
 )
