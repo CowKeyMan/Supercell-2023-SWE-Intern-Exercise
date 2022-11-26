@@ -9,6 +9,7 @@
 #include <map>
 #include <set>
 #include <string>
+#include <omp.h>
 
 #include <nlohmann/json.hpp>
 
@@ -34,10 +35,14 @@ private:
   string name;
   set<string> friends;
   map<string, Value> values;
+  omp_lock_t update_mutex_;
+  omp_lock_t *update_mutex = &update_mutex_;
 
 public:
   static shared_ptr<Observer<json>> broadcast_observer;
   User(const string &_name);
+  User(User&) = delete;
+  User(User&&) = delete;
   auto get_name() -> const string &;
   auto add_friend(const string &friend_name) -> void;
   auto remove_friend(const string &friend_name) -> void;
@@ -45,6 +50,7 @@ public:
   auto update_values(const json &new_values, u64 timestamp) -> void;
   auto update_values_notify(const json &new_values, u64 timestamp) -> void;
   auto get_value_json() -> json;
+  ~User();
 };
 
 }  // namespace friend_network

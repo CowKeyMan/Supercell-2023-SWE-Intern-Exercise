@@ -8,13 +8,13 @@
 #include "UserUpdateObserver/DummyUserUpdateObserver.h"
 
 using std::make_shared;
-using std::make_tuple;
 using std::vector;
 using namespace friend_network;
 
 TEST(UserTest, ManageFriends) {
-  string c_name = "C";
-  auto [a, b, c] = make_tuple(User("A"), User("B"), User(c_name));
+  auto a = User("A");
+  auto b = User("B");
+  auto c = User("C");
 
   a.add_friend("B");
   b.add_friend("A");

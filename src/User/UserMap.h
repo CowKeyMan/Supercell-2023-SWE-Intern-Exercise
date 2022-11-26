@@ -7,6 +7,7 @@
  * not available, they are created as a new user
  */
 
+#include <memory>
 #include <string>
 
 #include <unordered_map>
@@ -14,15 +15,17 @@
 #include "User/User.h"
 
 using std::string;
+using std::unique_ptr;
 using std::unordered_map;
 
 namespace friend_network {
 
 class UserMap {
-  unordered_map<string, User> name_to_user;
+  unordered_map<string, unique_ptr<User>> name_to_user;
 
 public:
   auto operator[](const string &name) -> User &;
+  auto to_json() -> json;
 };
 
 }  // namespace friend_network
