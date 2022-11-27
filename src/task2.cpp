@@ -1,15 +1,7 @@
 #include <iostream>
-#include <memory>
-#include <string>
-#include <vector>
-
-#include <initializer_list>
-#include <nlohmann/json.hpp>
-#include <unordered_map>
 
 #include "FileLineIterator/FileLineIterator.h"
 #include "TaskHandler/UpdateTaskHandler.h"
-#include "User/User.h"
 #include "User/UserMap.h"
 
 using json = nlohmann::json;
@@ -26,13 +18,7 @@ auto main(int, char **argv) -> int {
   auto input_iterator = make_shared<FileLineIterator>(argv[1]);
 
 #pragma omp parallel
-  {
-    cout << omp_get_thread_num() << '\n';
-    UpdateTaskHandler(input_iterator, name_to_user).read_and_process_tasks();
-    cout << omp_get_thread_num() << '\n';
-  }
-
-  cout << "ERAF";
+  UpdateTaskHandler(input_iterator, name_to_user).read_and_process_tasks();
 
   cout << name_to_user->to_json() << '\n';
 }

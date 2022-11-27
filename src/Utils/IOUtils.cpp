@@ -1,5 +1,6 @@
+#include <fmt/core.h>
+
 #include "Utils/IOUtils.h"
-#include "fmt/core.h"
 
 using fmt::format;
 using std::ios;

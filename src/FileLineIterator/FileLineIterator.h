@@ -16,12 +16,13 @@ using std::string;
 namespace friend_network {
 
 class FileLineIterator {
-private:
+protected:
   ThrowingIfstream stream;
 
 public:
   FileLineIterator(const string &filename);
-  auto operator>>(string &output) -> bool;
+  virtual auto operator>>(string &output) -> bool;
+  virtual ~FileLineIterator() = default;
 };
 
 }  // namespace friend_network

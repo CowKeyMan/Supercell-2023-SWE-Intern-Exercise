@@ -7,7 +7,7 @@ using namespace friend_network;
 using std::make_unique;
 
 auto UserMap::operator[](const string &name) -> User & {
-#pragma omp critical
+#pragma omp critical(USER_MAP_CONTAIN_SET)
   {
     if (!name_to_user.contains(name)) {
       name_to_user.emplace(name, make_unique<User>(name));

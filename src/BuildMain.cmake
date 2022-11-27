@@ -16,4 +16,10 @@ target_link_libraries(
 )
 enable_warnings(task2 "PRIVATE")
 
+add_executable(benchmark "${PROJECT_SOURCE_DIR}/benchmark.cpp")
+target_link_libraries(
+  benchmark PRIVATE common_libraries
+)
+enable_warnings(benchmark "PRIVATE")
+
 endif()

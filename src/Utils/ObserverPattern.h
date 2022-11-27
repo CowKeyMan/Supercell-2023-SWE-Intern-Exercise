@@ -20,6 +20,7 @@ template <class T>
 class Observer {
 public:
   virtual void update(const T &data) = 0;
+  virtual ~Observer() = default;
 };
 
 template <class T>
@@ -32,6 +33,7 @@ public:
   void notify_observers(T &data) {
     for (auto &observer : observers) { update(data); }
   }
+  virtual ~Subject() = default;
 };
 
 }  // namespace design_utils

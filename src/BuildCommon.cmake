@@ -51,11 +51,12 @@ add_library(
   user_map
   "${PROJECT_SOURCE_DIR}/User/UserMap.cpp"
 )
-target_link_libraries(user_map PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(user_map PRIVATE nlohmann_json::nlohmann_json OpenMP::OpenMP_CXX)
 target_link_libraries(io_utils PRIVATE fmt::fmt)
 add_library(
   file_line_iterator
   "${PROJECT_SOURCE_DIR}/FileLineIterator/FileLineIterator.cpp"
+  "${PROJECT_SOURCE_DIR}/FileLineIterator/ReadAllFileLineIterator.cpp"
 )
 target_link_libraries(file_line_iterator PRIVATE io_utils OpenMP::OpenMP_CXX)
 add_library(
