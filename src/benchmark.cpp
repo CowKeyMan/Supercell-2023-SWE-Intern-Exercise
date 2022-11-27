@@ -8,6 +8,7 @@
 #include "User/UserMap.h"
 
 using fmt::format;
+using std::cerr;
 using std::cout;
 using std::make_shared;
 using std::string;
@@ -20,8 +21,12 @@ using namespace friend_network;
 #include <iostream>
 
 auto main(int, char **argv) -> int {
-  auto input_iterator
-    = make_shared<ReadAllFileLineIterator>(argv[1]);
+  if (string(argv[1]) != "-i") {
+    cerr << "first argument should be '-i' follwed by the filename in the "
+            "second argument\n";
+    exit(1);
+  }
+  auto input_iterator = make_shared<ReadAllFileLineIterator>(argv[2]);
   auto name_to_user = make_shared<UserMap>();
 
   int max_threads;

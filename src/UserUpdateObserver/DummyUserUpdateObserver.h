@@ -3,7 +3,7 @@
 
 /**
  * @file DummyUserUpdateObserver.h
- * @brief
+ * @brief A default observer which just stores the updates into a string vector
  */
 
 #include <vector>
