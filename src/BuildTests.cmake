@@ -37,7 +37,7 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/FileLineIterator/FileLineIterator_test.cpp"
   "${PROJECT_SOURCE_DIR}/FileLineIterator/ReadAllFileLineIterator_test.cpp"
   "${PROJECT_SOURCE_DIR}/TaskHandler/FriendsTaskHandler_test.cpp"
-  "${PROJECT_SOURCE_DIR}/TaskHandler/UpdateTaskHandler_test.cpp"
+  # "${PROJECT_SOURCE_DIR}/TaskHandler/UpdateTaskHandler_test.cpp"
   "${PROJECT_SOURCE_DIR}/UserUpdateObserver/StdoutUserUpdateObserver_test.cpp"
 
   # TODO: add more tests sources here
