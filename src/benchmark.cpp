@@ -19,9 +19,9 @@ using namespace friend_network;
 
 #include <iostream>
 
-auto main() -> int {
+auto main(int, char **argv) -> int {
   auto input_iterator
-    = make_shared<ReadAllFileLineIterator>("test_objects/ex2/input1.txt");
+    = make_shared<ReadAllFileLineIterator>(argv[1]);
   auto name_to_user = make_shared<UserMap>();
 
   int max_threads;
