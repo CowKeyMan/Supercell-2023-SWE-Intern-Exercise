@@ -1,0 +1,36 @@
+classDiagram
+  direction LR
+  main --> UserMap
+  UserMap --> User
+  User --> UserUpdateObserver
+  User --> Value
+  main --> FileLineIterator
+  main --> TaskHandler
+  main --> UserUpdateObserver
+  TaskHandler --> FileLineIterator
+  class task {
+    main()
+  }
+  class UserMap {
+    operator[](username)
+    to_json()
+  }
+  class User {
+    name
+    update_values(values)
+    update_values_notify(values)
+    get_values()
+  }
+  class Value {
+    timestamp
+    value
+  }
+  class UserUpdateObserver {
+    notify(broadcast_message)
+  }
+  class TaskHandler {
+    read_and_process_tasks()
+  }
+  class FileLineIterator {
+    operator>>(line)
+  }

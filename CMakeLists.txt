@@ -4,10 +4,10 @@
 cmake_minimum_required(VERSION 3.14)
 
 project(
-  CPP_github_workflow
+  "Friends Network"
   VERSION 1.0
-  DESCRIPTION "A workflow base for any C++ project"
-  HOMEPAGE_URL https://github.com/CowKeyMan/CPP_github_workflow
+  DESCRIPTION "Application for the supercell Summer 2023 SWE internship"
+  HOMEPAGE_URL "https://github.com/CowKeyMan/Supercell-2023-SWE-Intern-Exercise"
   LANGUAGES CXX
 )
 

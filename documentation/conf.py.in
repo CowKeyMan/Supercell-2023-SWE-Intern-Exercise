@@ -14,6 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 from subprocess import Popen
+from pathlib import Path
 
 Popen('doxygen', shell=True).wait()
 
@@ -40,6 +41,8 @@ extensions = [
     'sphinx.ext.inheritance_diagram',
     'exhale',
     'sphinx_rtd_dark_mode',
+    'sphinxcontrib.mermaid',
+    'matplotlib.sphinxext.plot_directive',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -101,3 +104,10 @@ primary_domain = 'cpp'
 suppress_warnings = ['autosectionlabel.*']
 
 default_dark_mode = False
+
+numref = True
+numfig = True
+
+mermaid_output_format = 'png'
+mermaid_params = ['--theme', 'neutral', '--backgroundColor', 'transparent']
+mermaid_cmd = str((Path('..') / 'node_modules/.bin/mmdc').absolute())

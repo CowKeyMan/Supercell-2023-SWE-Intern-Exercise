@@ -22,7 +22,10 @@ jobs:
         run: sudo apt-get install doxygen lcov -y
 
       - name: Install Sphinx
-        run: pip3 install breathe exhale sphinx sphinx-rtd-theme sphinx-rtd-dark-mode
+        run: pip3 install breathe exhale sphinx sphinx-rtd-theme sphinx-rtd-dark-mode matplotlib pandas
+
+      - name: Install Mermaid
+        run: npm install @mermaid-js/mermaid-cli
 
       - name: Build all main, tests and documentation
         run: sh ./scripts/build/all.sh
