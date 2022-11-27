@@ -1,7 +1,7 @@
 # This is the root cmake file where the sources lie
 # Different CMake versions have more features.
 
-cmake_minimum_required(VERSION 3.19)
+cmake_minimum_required(VERSION 3.14)
 
 project(
   CPP_github_workflow
