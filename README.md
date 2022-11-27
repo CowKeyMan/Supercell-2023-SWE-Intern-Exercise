@@ -1,17 +1,17 @@
-# CPP_github_workflow
+# Friends Network
 
-This repository contains a workflow for any C++ project with examples inside and the tools necessary for
-* Building the executables
-* Testing
-* Automating documentation generation
-* Ensuring code consistency among the repository
+This is my solution repository for the technical task for the supercell SWE intern position.
 
-## For Users
+## Important Notes
 
-This section is meant for the actual README. Put things that the users of the repository need to know here.
-
-## For Developers
-
-The documentation for developing this code base lies in the github pages: <https://cowkeyman.github.io/CPP_github_workflow/>. The pages are built using the documentation of the repository itself using github actions.
-
-If you wish to request a change or addition to this repository, create a github issue or make a pull request.
+* I have written my solution using C++
+* My results have been tested on Ubuntu 20.04
+* In order to run the program, you will need to have OpenMP, a C++ compiler and CMake installed.
+    * OpenMP can be installed using: `sudo apt install libomp-dev`
+    * The rest can be installed using `sudo apt install libomp-dev`
+* Compile everything using `./scripts/build/release`. This will generate three binaries:
+    * `build/bin/task1`: This is the binary for task 1
+    * `build/bin/task2`: This is the binary for task 1
+    * `build/bin/benchmark`: This is a benchmark which will run the given file 5 times for as many threads that you have
+* To run the tests, you need to first download the test objects by running `./scripts/configure/download_test_objects.sh`, then compile the tests using `./scripts/build/tests.sh` and then run them by using `./build/bin/test`
+* For more detailed documentation as well as reasons why I took certain decisions within the code base, please visit: <https://cowkeyman.github.io/Supercell-2023-SWE-Intern-Exercise/> and click on the documentation button. You will find further and cleaner instructions there.
