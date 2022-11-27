@@ -17,7 +17,7 @@ General
 #. The UserMap is a class which contains an ordered map of the Users. This map maps names to their respective Users. When a user is accessed but not found, it is instead created on the fly.
 #. The User is the data subject and stores the values.
 
-  #. Each value has a timestamp and the actual string.
+   * Each value has a timestamp and the actual string.
 
 #. The UserUpdateObserver observes the user when it updates a value, so that it may broadcast the change to their friends.
 #. The TaskHandler is where the work happens. Here, the json string given by the FileLineIterator is parsed, and the tasks (*make_friends, del_friends* or *update*) are executed.
@@ -52,6 +52,6 @@ The following is an average scaling of 5 runs on my laptop, plugged in on balanc
 
 .. plot:: Documents/ProjectDocumentation/graphs/plot_benchmark_results.py
 
-* The best score is 378ms at 15 threads, which leads to a bit less than 3 million requests per second. On high performance mode, this value consistently goes down under 200ms, which would allow my laptop to handle more than 5 million requests per second, assuming IO is not a bottleneck.
+* The best score is 378ms at 15 threads, which leads to a bit less than 3 million requests per second. On high performance mode, this value consistently goes down to under 200ms, which would allow my laptop to handle more than 5 million requests per second, assuming IO is not a bottleneck.
 
 * The next section will describe alternative methods of parallelising this task.
