@@ -1,0 +1,98 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_DummyUserUpdateObserver.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_FileLineIterator.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_FriendsTaskHandler.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_IOUtils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_ObserverPattern.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_ReadAllFileLineIterator.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_StdoutUserUpdateObserver.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_TypeDefinitions.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_UpdateTaskHandler.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_User.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_UserMap.h.rst

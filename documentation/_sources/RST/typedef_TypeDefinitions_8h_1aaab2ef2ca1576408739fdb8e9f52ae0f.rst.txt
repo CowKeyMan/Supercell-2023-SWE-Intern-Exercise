@@ -1,0 +1,14 @@
+.. _exhale_typedef_TypeDefinitions_8h_1aaab2ef2ca1576408739fdb8e9f52ae0f:
+
+Typedef s64
+===========
+
+- Defined in :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_TypeDefinitions.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: s64
+   :project: Friends Network

@@ -1,0 +1,26 @@
+.. _exhale_class_classDummyUserUpdateObserver:
+
+Class DummyUserUpdateObserver
+=============================
+
+- Defined in :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_DummyUserUpdateObserver.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public design_utils::Observer< json >`` (:ref:`exhale_class_classdesign__utils_1_1Observer`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: DummyUserUpdateObserver
+   :project: Friends Network
+   :members:
+   :protected-members:
+   :undoc-members:

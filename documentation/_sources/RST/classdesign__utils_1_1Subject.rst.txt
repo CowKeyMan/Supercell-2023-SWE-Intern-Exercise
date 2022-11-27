@@ -1,0 +1,17 @@
+.. _exhale_class_classdesign__utils_1_1Subject:
+
+Template Class Subject
+======================
+
+- Defined in :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_ObserverPattern.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: design_utils::Subject
+   :project: Friends Network
+   :members:
+   :protected-members:
+   :undoc-members:

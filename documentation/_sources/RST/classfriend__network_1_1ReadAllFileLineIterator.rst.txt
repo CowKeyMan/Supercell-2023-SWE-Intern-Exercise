@@ -1,0 +1,26 @@
+.. _exhale_class_classfriend__network_1_1ReadAllFileLineIterator:
+
+Class ReadAllFileLineIterator
+=============================
+
+- Defined in :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_ReadAllFileLineIterator.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public friend_network::FileLineIterator`` (:ref:`exhale_class_classfriend__network_1_1FileLineIterator`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: friend_network::ReadAllFileLineIterator
+   :project: Friends Network
+   :members:
+   :protected-members:
+   :undoc-members:

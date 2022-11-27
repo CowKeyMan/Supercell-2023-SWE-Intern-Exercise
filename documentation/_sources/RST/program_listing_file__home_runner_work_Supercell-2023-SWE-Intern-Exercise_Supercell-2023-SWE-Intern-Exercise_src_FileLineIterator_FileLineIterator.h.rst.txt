@@ -1,0 +1,37 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_FileLineIterator.h:
+
+Program Listing for File FileLineIterator.h
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_FileLineIterator.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/FileLineIterator/FileLineIterator.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef FILE_LINE_ITERATOR_H
+   #define FILE_LINE_ITERATOR_H
+   
+   #include <string>
+   
+   #include "Utils/IOUtils.h"
+   
+   using io_utils::ThrowingIfstream;
+   using std::string;
+   
+   namespace friend_network {
+   
+   class FileLineIterator {
+   protected:
+     ThrowingIfstream stream;
+   
+   public:
+     FileLineIterator(const string &filename);
+     virtual auto operator>>(string &output) -> bool;
+     virtual ~FileLineIterator() = default;
+   };
+   
+   }  // namespace friend_network
+   
+   #endif

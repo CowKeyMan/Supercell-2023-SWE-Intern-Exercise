@@ -1,0 +1,39 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_ReadAllFileLineIterator.h:
+
+Program Listing for File ReadAllFileLineIterator.h
+==================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_ReadAllFileLineIterator.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/FileLineIterator/ReadAllFileLineIterator.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef READ_ALL_FILE_LINE_ITERATOR_H
+   #define READ_ALL_FILE_LINE_ITERATOR_H
+   
+   #include <string>
+   #include <vector>
+   
+   #include "FileLineIterator/FileLineIterator.h"
+   
+   using std::string;
+   using std::vector;
+   
+   namespace friend_network {
+   
+   class ReadAllFileLineIterator: public FileLineIterator {
+   private:
+     vector<string> requests;
+     vector<string>::iterator requests_iterator;
+   
+   public:
+     ReadAllFileLineIterator(const string &filename);
+     auto operator>>(string &output) -> bool override;
+     auto reset_iterator() -> void;
+   };
+   
+   }  // namespace friend_network
+   
+   #endif

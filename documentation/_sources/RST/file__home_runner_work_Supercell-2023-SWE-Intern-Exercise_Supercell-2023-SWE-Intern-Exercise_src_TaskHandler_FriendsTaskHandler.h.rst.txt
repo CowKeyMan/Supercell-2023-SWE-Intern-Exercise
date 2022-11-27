@@ -1,0 +1,67 @@
+
+.. _file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_FriendsTaskHandler.h:
+
+File FriendsTaskHandler.h
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/TaskHandler``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Reads jsons and delegates tasks to the other components to make friends, delete friends or update the users inventory. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/TaskHandler/FriendsTaskHandler.h``)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_FriendsTaskHandler.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``FileLineIterator/FileLineIterator.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_FileLineIterator.h`)
+
+- ``User/User.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_User.h`)
+
+- ``User/UserMap.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_UserMap.h`)
+
+- ``Utils/TypeDefinitions.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_TypeDefinitions.h`)
+
+- ``memory``
+
+- ``unordered_map``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_friend_network`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classfriend__network_1_1FriendsTaskHandler`
+

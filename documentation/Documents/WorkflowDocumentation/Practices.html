@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practices &mdash; Friends Network  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="src" href="../../RST/modules.html" />
+    <link rel="prev" title="Workflow Files" href="WorkflowFiles.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Friends Network
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ProjectDocumentation/ProjectDocumentation.html">Project Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ProjectDocumentation/SolutionsExplanation.html">Solutions Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/SolutionsExplanation.html#solution-diagram">Solution Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/SolutionsExplanation.html#general">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/SolutionsExplanation.html#task-1">Task 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/SolutionsExplanation.html#task-2">Task 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/SolutionsExplanation.html#benchmark">Benchmark</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ProjectDocumentation/SolutionsExplanation.html#benchmarking-results">Benchmarking results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ProjectDocumentation/DecisionsTakenAndAlternatives.html">Decisions Taken and Alternatives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/DecisionsTakenAndAlternatives.html#task-1">Task 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/DecisionsTakenAndAlternatives.html#task-2">Task 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ProjectDocumentation/DecisionsTakenAndAlternatives.html#benchmark">Benchmark</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="WorkflowDocumentation.html">Workflow Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GettingsStarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GettingsStarted.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GettingsStarted.html#typical-workflow">Typical workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#cmake">CMake</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Tools.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#doxygen">Doxygen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Tools.html#id1">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#sphinx">Sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Tools.html#id2">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#clang-tidy">clang-tidy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Tools.html#id3">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#clang-format">clang-format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Tools.html#id4">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#googletest">googletest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Tools.html#id5">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#lcov">lcov</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Tools.html#id6">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Tools.html#github-pages">Github pages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="WorkflowFiles.html">Workflow Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#trailing-return-type">Trailing return type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#naming-conventions">Naming Conventions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-naming-convention">File naming convention</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-and-variable-names">Function and variable names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#namespaces">Namespaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#header-guards">Header Guards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-code-comments">In-code comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing">Testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../RST/modules.html">src</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../RST/modules.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RST/modules.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RST/modules.html#full-api">Full API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../RST/modules.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/namespace_design_utils.html">Namespace design_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/namespace_friend_network.html">Namespace friend_network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/namespace_io_utils.html">Namespace io_utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../RST/modules.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classdesign__utils_1_1Observer.html">Template Class Observer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classdesign__utils_1_1Subject.html">Template Class Subject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classDummyUserUpdateObserver.html">Class DummyUserUpdateObserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1FileLineIterator.html">Class FileLineIterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1FriendsTaskHandler.html">Class FriendsTaskHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1ReadAllFileLineIterator.html">Class ReadAllFileLineIterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1StdoutUserUpdateObserver.html">Class StdoutUserUpdateObserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1UpdateTaskHandler.html">Class UpdateTaskHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1User.html">Class User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1UserMap.html">Class UserMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1Value.html">Class Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classio__utils_1_1ThrowingIfstream.html">Class ThrowingIfstream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classio__utils_1_1ThrowingOfstream.html">Class ThrowingOfstream</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../RST/modules.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1ae5300ed9eabeae78ee9d0c704a9c412a.html">Typedef s32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1aaab2ef2ca1576408739fdb8e9f52ae0f.html">Typedef s64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a70c1fcc1a4e96af8f6580f708657cd41.html">Typedef u32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a1af9f95651e921615e75917a6dd1b574.html">Typedef u64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a987e4d6cf789cb59dbb390728271e4d6.html">Typedef u8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a69aa29b598b851b0640aa225a9e5d61d.html">Typedef uint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Friends Network</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="WorkflowDocumentation.html">Workflow Documentation</a></li>
+      <li class="breadcrumb-item active">Practices</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Documents/WorkflowDocumentation/Practices.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="practices">
+<h1>Practices<a class="headerlink" href="#practices" title="Permalink to this headline"></a></h1>
+<p>Certain practices while developing the code should be respected among developers. This section is dedicated to defining the most prominent ones</p>
+<section id="trailing-return-type">
+<h2>Trailing return type<a class="headerlink" href="#trailing-return-type" title="Permalink to this headline"></a></h2>
+<p>Trailing return type is the new way in C++11 to declare functions. It is great because it ensures consistency of style between function declarations and variable declarations. (It also resembles python a lot!)</p>
+<p>As an example, whereas traditionally we write the following: <code class="docutils literal notranslate"><span class="pre">float</span> <span class="pre">add(int</span> <span class="pre">a,</span> <span class="pre">int</span> <span class="pre">b)</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code>, we now write: <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">add(int</span> <span class="pre">a,</span> <span class="pre">int</span> <span class="pre">b)</span> <span class="pre">-&gt;</span> <span class="pre">float</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code></p>
+<p>As of C++14, we can also just write <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">add(int</span> <span class="pre">a,</span> <span class="pre">int</span> <span class="pre">b)</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code>, and the return type will be deduced automatically, however, for now, we keep the return type in the function for the sake of the programmers so we know what we are returning.</p>
+</section>
+<section id="naming-conventions">
+<h2>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline"></a></h2>
+<section id="file-naming-convention">
+<h3>File naming convention<a class="headerlink" href="#file-naming-convention" title="Permalink to this headline"></a></h3>
+<p>When naming files, we name the related header, source and test files with the same prefix. This way when we sort by name we can see them grouped together. For example, if our <em>Functions.cpp</em> file has a corresponding <em>Functions.h</em>, then our test file will be called <em>Functions_test.cpp</em> (as opposed to <em>Test_Functions.cpp</em>, which would end up grouping the tests together instead). File names use CamelCase, and then we separate tags (tags such as <em>test</em>) with underscores. These are valid file names: File1.cpp, File2.h, FileThree.cpp, FileThree_test.cpp.</p>
+</section>
+<section id="function-and-variable-names">
+<h3>Function and variable names<a class="headerlink" href="#function-and-variable-names" title="Permalink to this headline"></a></h3>
+<p>This repository uses snake_case for all variables and function names. For example, these are valid function and variable names: variable, my_variable, and_this_is_a_function, my2_variable.</p>
+</section>
+<section id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h3>
+<p>With regards to namespaces, snake_case is also used.</p>
+</section>
+</section>
+<section id="header-guards">
+<h2>Header Guards<a class="headerlink" href="#header-guards" title="Permalink to this headline"></a></h2>
+<p>Each header file should be in the following format:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef FILE_NAME_H</span>
+<span class="cp">#define FILE_NAME_H</span>
+<span class="c1">// everything else here</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>Above, <em>FILE_NAME</em> will be the name of the file but we switch from SnakeCase to ALL_CAPS_SNAKE_CASE and we add the <em>_H</em> at the end. So a file named ‘HelloWorld_test.’ should have a header guard defining ‘HELLO_WORLD_TEST_H’</p>
+</section>
+<section id="in-code-comments">
+<h2>In-code comments<a class="headerlink" href="#in-code-comments" title="Permalink to this headline"></a></h2>
+<p>To keep the codebase clean of redundant comments, we try to use clear naming conventions to beging with. When something needs to be non-clean, only then do we put a comment next to it.</p>
+<p>Furthermore, every header file should have a comment after the header guards, defining what it does. Look at an existing header file for the correct format, as they all should follow that structure to be recognised by doxygen.</p>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>Executables with main functions are not tested</p></li>
+<li><p>Prefer constructors and destructors over <cite>virtual void SetUp()</cite> and <cite>virtual void TearDown()</cite>. The latter may be necessary in some cases such as when inheritance is needed or when the destructor code can throw exceptions.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="WorkflowFiles.html" class="btn btn-neutral float-left" title="Workflow Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../RST/modules.html" class="btn btn-neutral float-right" title="src" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Daniel Cauchi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+.. _file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_DummyUserUpdateObserver.h:
+
+File DummyUserUpdateObserver.h
+==============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/UserUpdateObserver``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+A default observer which just stores the updates into a string vector. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/UserUpdateObserver/DummyUserUpdateObserver.h``)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_DummyUserUpdateObserver.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``User/User.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_User.h`)
+
+- ``vector``
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classDummyUserUpdateObserver`
+

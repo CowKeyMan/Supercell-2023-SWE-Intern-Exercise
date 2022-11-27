@@ -1,0 +1,61 @@
+
+.. _file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_ReadAllFileLineIterator.h:
+
+File ReadAllFileLineIterator.h
+==============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/FileLineIterator``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Similar to FileLineIterator but it reads the entire file first, loads it into memory, then serves it. Useful for benchamrking to avoid any IO since this may be variable. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/FileLineIterator/ReadAllFileLineIterator.h``)
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_ReadAllFileLineIterator.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``FileLineIterator/FileLineIterator.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_FileLineIterator.h`)
+
+- ``string``
+
+- ``vector``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_friend_network`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classfriend__network_1_1ReadAllFileLineIterator`
+

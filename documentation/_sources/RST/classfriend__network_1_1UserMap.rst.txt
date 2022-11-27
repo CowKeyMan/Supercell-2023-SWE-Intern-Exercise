@@ -1,0 +1,17 @@
+.. _exhale_class_classfriend__network_1_1UserMap:
+
+Class UserMap
+=============
+
+- Defined in :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_UserMap.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: friend_network::UserMap
+   :project: Friends Network
+   :members:
+   :protected-members:
+   :undoc-members:

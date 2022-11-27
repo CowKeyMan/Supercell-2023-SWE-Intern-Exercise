@@ -1,0 +1,69 @@
+
+.. _file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_ObserverPattern.h:
+
+File ObserverPattern.h
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/Utils``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Base classes for Observer and Subject to use when using the observer pattern. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/Utils/ObserverPattern.h``)
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_ObserverPattern.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``memory``
+
+- ``unordered_set``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_User.h`
+
+- :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_StdoutUserUpdateObserver.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_design_utils`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classdesign__utils_1_1Observer`
+
+- :ref:`exhale_class_classdesign__utils_1_1Subject`
+

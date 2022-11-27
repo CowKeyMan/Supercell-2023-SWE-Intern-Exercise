@@ -1,0 +1,59 @@
+
+.. _file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_UpdateTaskHandler.h:
+
+File UpdateTaskHandler.h
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/TaskHandler``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Given a stream of data, it performs updates on the user inventories (and always assumes they are updates) 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/TaskHandler/UpdateTaskHandler.h``)
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_UpdateTaskHandler.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``FileLineIterator/FileLineIterator.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_FileLineIterator_FileLineIterator.h`)
+
+- ``User/UserMap.h`` (:ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_UserMap.h`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_friend_network`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classfriend__network_1_1UpdateTaskHandler`
+

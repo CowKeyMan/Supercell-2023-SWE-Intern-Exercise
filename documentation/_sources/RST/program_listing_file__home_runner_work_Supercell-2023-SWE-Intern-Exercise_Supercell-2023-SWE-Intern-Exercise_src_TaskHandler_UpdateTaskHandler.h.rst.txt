@@ -1,0 +1,36 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_UpdateTaskHandler.h:
+
+Program Listing for File UpdateTaskHandler.h
+============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_UpdateTaskHandler.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/TaskHandler/UpdateTaskHandler.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef UPDATE_TASK_HANDLER_H
+   #define UPDATE_TASK_HANDLER_H
+   
+   #include "FileLineIterator/FileLineIterator.h"
+   #include "User/UserMap.h"
+   
+   namespace friend_network {
+   
+   class UpdateTaskHandler {
+     string buffer;
+     shared_ptr<FileLineIterator> line_iterator;
+     shared_ptr<UserMap> name_to_user;
+   
+   public:
+     UpdateTaskHandler(
+       shared_ptr<FileLineIterator> _line_iterator,
+       shared_ptr<UserMap> _name_to_user
+     );
+     auto read_and_process_tasks() -> void;
+   };
+   
+   }  // namespace friend_network
+   
+   #endif

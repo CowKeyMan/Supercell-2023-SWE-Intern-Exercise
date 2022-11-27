@@ -1,0 +1,14 @@
+.. _exhale_typedef_TypeDefinitions_8h_1a69aa29b598b851b0640aa225a9e5d61d:
+
+Typedef uint
+============
+
+- Defined in :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_TypeDefinitions.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: uint
+   :project: Friends Network

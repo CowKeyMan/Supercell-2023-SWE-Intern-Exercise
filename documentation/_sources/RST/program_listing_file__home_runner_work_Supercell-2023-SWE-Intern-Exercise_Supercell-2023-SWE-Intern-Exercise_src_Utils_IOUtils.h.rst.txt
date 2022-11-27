@@ -1,0 +1,41 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_IOUtils.h:
+
+Program Listing for File IOUtils.h
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_IOUtils.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/Utils/IOUtils.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef I_O_UTILS_H
+   #define I_O_UTILS_H
+   
+   #include <fstream>
+   #include <string>
+   
+   using std::ifstream;
+   using std::ofstream;
+   using std::string;
+   
+   namespace io_utils {
+   
+   class ThrowingIfstream: public ifstream {
+   public:
+     ThrowingIfstream(
+       const string &filename, ios_base::openmode mode = ios_base::in
+     );
+     static void check_file_exists(const string filename);
+   };
+   
+   class ThrowingOfstream: public ofstream {
+   public:
+     ThrowingOfstream(const string filepath, ios_base::openmode mode);
+     static void check_path_valid(const string filepath);
+   };
+   
+   }  // namespace io_utils
+   
+   #endif

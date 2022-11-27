@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solutions Explanation &mdash; Friends Network  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Decisions Taken and Alternatives" href="DecisionsTakenAndAlternatives.html" />
+    <link rel="prev" title="Project Documentation" href="ProjectDocumentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Friends Network
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ProjectDocumentation.html">Project Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Solutions Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#solution-diagram">Solution Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-1">Task 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2">Task 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#benchmark">Benchmark</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#benchmarking-results">Benchmarking results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DecisionsTakenAndAlternatives.html">Decisions Taken and Alternatives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DecisionsTakenAndAlternatives.html#task-1">Task 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DecisionsTakenAndAlternatives.html#task-2">Task 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DecisionsTakenAndAlternatives.html#benchmark">Benchmark</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../WorkflowDocumentation/WorkflowDocumentation.html">Workflow Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../WorkflowDocumentation/GettingsStarted.html">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/GettingsStarted.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/GettingsStarted.html#typical-workflow">Typical workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../WorkflowDocumentation/Tools.html">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#cmake">CMake</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#doxygen">Doxygen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#id1">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#sphinx">Sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#id2">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#clang-tidy">clang-tidy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#id3">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#clang-format">clang-format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#id4">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#googletest">googletest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#id5">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#lcov">lcov</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#id6">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Tools.html#github-pages">Github pages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../WorkflowDocumentation/WorkflowFiles.html">Workflow Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../WorkflowDocumentation/Practices.html">Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#trailing-return-type">Trailing return type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#naming-conventions">Naming Conventions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#file-naming-convention">File naming convention</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#function-and-variable-names">Function and variable names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#namespaces">Namespaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#header-guards">Header Guards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#in-code-comments">In-code comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../WorkflowDocumentation/Practices.html#testing">Testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../RST/modules.html">src</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../RST/modules.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RST/modules.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../RST/modules.html#full-api">Full API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../RST/modules.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/namespace_design_utils.html">Namespace design_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/namespace_friend_network.html">Namespace friend_network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/namespace_io_utils.html">Namespace io_utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../RST/modules.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classdesign__utils_1_1Observer.html">Template Class Observer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classdesign__utils_1_1Subject.html">Template Class Subject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classDummyUserUpdateObserver.html">Class DummyUserUpdateObserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1FileLineIterator.html">Class FileLineIterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1FriendsTaskHandler.html">Class FriendsTaskHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1ReadAllFileLineIterator.html">Class ReadAllFileLineIterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1StdoutUserUpdateObserver.html">Class StdoutUserUpdateObserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1UpdateTaskHandler.html">Class UpdateTaskHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1User.html">Class User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1UserMap.html">Class UserMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classfriend__network_1_1Value.html">Class Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classio__utils_1_1ThrowingIfstream.html">Class ThrowingIfstream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/classio__utils_1_1ThrowingOfstream.html">Class ThrowingOfstream</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../RST/modules.html#typedefs">Typedefs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1ae5300ed9eabeae78ee9d0c704a9c412a.html">Typedef s32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1aaab2ef2ca1576408739fdb8e9f52ae0f.html">Typedef s64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a70c1fcc1a4e96af8f6580f708657cd41.html">Typedef u32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a1af9f95651e921615e75917a6dd1b574.html">Typedef u64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a987e4d6cf789cb59dbb390728271e4d6.html">Typedef u8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../RST/typedef_TypeDefinitions_8h_1a69aa29b598b851b0640aa225a9e5d61d.html">Typedef uint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Friends Network</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="ProjectDocumentation.html">Project Documentation</a></li>
+      <li class="breadcrumb-item active">Solutions Explanation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Documents/ProjectDocumentation/SolutionsExplanation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="solutions-explanation">
+<h1>Solutions Explanation<a class="headerlink" href="#solutions-explanation" title="Permalink to this headline"></a></h1>
+<p>Here I will discuss the main components of the system at a high level and how they connect to one another. The below diagram will help visualise the system while reading the explanation.</p>
+<section id="solution-diagram">
+<h2>Solution Diagram<a class="headerlink" href="#solution-diagram" title="Permalink to this headline"></a></h2>
+<img src="../../_images/mermaid-d325ccf14b97af351096ddf74c2f3e94c13cb2e3.png" alt="classDiagram
+  direction LR
+  main --&gt; UserMap
+  UserMap --&gt; User
+  User --&gt; UserUpdateObserver
+  User --&gt; Value
+  main --&gt; FileLineIterator
+  main --&gt; TaskHandler
+  main --&gt; UserUpdateObserver
+  TaskHandler --&gt; FileLineIterator
+  class task {
+    main()
+  }
+  class UserMap {
+    operator[](username)
+    to_json()
+  }
+  class User {
+    name
+    values
+    update_values(values)
+    update_values_notify(values)
+    get_values()
+  }
+  class Value {
+    timestamp
+    value
+  }
+  class UserUpdateObserver {
+    notify(broadcast_message)
+  }
+  class TaskHandler {
+    read_and_process_tasks()
+  }
+  class FileLineIterator {
+    operator&gt;&gt;(line)
+  }" />
+</section>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li><p>The project starts at the main, which is located in <cite>src/task&lt;task number&gt;.cpp</cite> or <cite>src/benchmark.cpp</cite>. This module initialises all the components and feeds them to one another.</p></li>
+<li><p>The FileLineIterator takes a filename as input, then it opens it and serves it line by line.</p></li>
+<li><p>The UserMap is a class which contains an ordered map of the Users. This map maps usernames (strings) to their respective Users. When a user is accessed but not found, it is instead created on the fly.</p></li>
+<li><p>The User is the data subject and stores the values as an unordered map of a string to a Value object.</p>
+<ul class="simple">
+<li><p>Each Value has a timestamp and the actual string.</p></li>
+</ul>
+</li>
+<li><p>The UserUpdateObserver observes the user when it updates a value, so that it may broadcast the change to their friends.</p></li>
+<li><p>The TaskHandler is where the work happens. Here, the json string given by the FileLineIterator is parsed, and the tasks (<em>make_friends, del_friends</em> or <em>update</em>) are executed.</p></li>
+</ol>
+<p>Now I will describe task specific differences.</p>
+</section>
+<section id="task-1">
+<h2>Task 1<a class="headerlink" href="#task-1" title="Permalink to this headline"></a></h2>
+<p>For this task, the <a class="reference internal" href="#general"><span class="std std-ref">General</span></a> overview describes this task quite well, as there is not much special handling in the components.</p>
+</section>
+<section id="task-2">
+<h2>Task 2<a class="headerlink" href="#task-2" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>For this task, the same FileLineIterator is used, but the handler is changed. This time, the UpdateTaskHandler is used since we only need to update the values. This avoids checking which function we need to apply for efficiency.</p></li>
+<li><p>When updating the User value, a mutex lock is added so that we cannot be editing the same user’s values at the same time</p></li>
+<li><p>Furthermore, a critical section is added to the UserMap class when checking if a user exists and when we need to add them.</p></li>
+<li><p>Another critical section is added for reading the file in the FileLineIterator so that <cite>getline()</cite> is not called by 2 threads at the same time.</p></li>
+<li><p>Lastly, to parallelise, multiple UpdateTaskHandlers are created so that they all read from the same FileLineIterator and they all update the same UserMap. This is shown in <cite>src/task2.cpp</cite></p></li>
+</ul>
+</section>
+<section id="benchmark">
+<h2>Benchmark<a class="headerlink" href="#benchmark" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>To benchmark the code, I used a different LineFileIterator called <em>ReadAllLineFileIterator</em>. This class reads the entire file first and stores it into a string vector, then serves it to the consumers as usual, so the consumers are abstracted from how the actual reading is done.</p>
+<ul>
+<li><p>The reason for this decision is so that the benchmarking is independent of any IO, since this could vary depending on wether we are reading from a file or wether we are reading from the network. The physical device will also make this benhmarking difficult (ex: reading from SSD is much faster than reading from a hard drive, and reading from network might be even slower). Thus, this will allow us to benchmark the scalability of the compute itself, since all data will already be in memory.</p></li>
+</ul>
+</li>
+</ul>
+<section id="benchmarking-results">
+<h3>Benchmarking results<a class="headerlink" href="#benchmarking-results" title="Permalink to this headline"></a></h3>
+<p>The following is an average scaling of 5 runs on my laptop, plugged in on balanced performance mode. The CPU is an <em>Intel(R) Core(TM) i7-10870H CPU &#64; 2.20GHz</em>.</p>
+<p>(<a class="reference external" href="../../Documents/ProjectDocumentation/graphs/plot_benchmark_results.py">Source code</a>, <a class="reference external" href="../../Documents/ProjectDocumentation/graphs/plot_benchmark_results.png">png</a>, <a class="reference external" href="../../Documents/ProjectDocumentation/graphs/plot_benchmark_results.hires.png">hires.png</a>, <a class="reference external" href="../../Documents/ProjectDocumentation/graphs/plot_benchmark_results.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="../../_images/plot_benchmark_results.png" class="plot-directive" src="../../_images/plot_benchmark_results.png" />
+</figure>
+<ul class="simple">
+<li><p>The best score is 378ms at 15 threads, which leads to a bit less than 3 million requests per second. On high performance mode, this value consistently goes down to under 200ms, which would allow my laptop to handle more than 5 million requests per second, assuming IO is not a bottleneck.</p></li>
+</ul>
+<p>The next section will describe alternative methods of parallelising this task.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ProjectDocumentation.html" class="btn btn-neutral float-left" title="Project Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DecisionsTakenAndAlternatives.html" class="btn btn-neutral float-right" title="Decisions Taken and Alternatives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Daniel Cauchi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

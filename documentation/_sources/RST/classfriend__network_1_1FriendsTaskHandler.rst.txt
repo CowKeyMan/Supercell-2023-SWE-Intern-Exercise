@@ -1,0 +1,17 @@
+.. _exhale_class_classfriend__network_1_1FriendsTaskHandler:
+
+Class FriendsTaskHandler
+========================
+
+- Defined in :ref:`file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_FriendsTaskHandler.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: friend_network::FriendsTaskHandler
+   :project: Friends Network
+   :members:
+   :protected-members:
+   :undoc-members:

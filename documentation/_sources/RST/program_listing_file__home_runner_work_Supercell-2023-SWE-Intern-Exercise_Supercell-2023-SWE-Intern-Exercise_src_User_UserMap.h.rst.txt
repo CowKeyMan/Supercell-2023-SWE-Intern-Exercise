@@ -1,0 +1,39 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_UserMap.h:
+
+Program Listing for File UserMap.h
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_User_UserMap.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/User/UserMap.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef USER_MAP_H
+   #define USER_MAP_H
+   
+   #include <memory>
+   #include <string>
+   
+   #include <unordered_map>
+   
+   #include "User/User.h"
+   
+   using std::string;
+   using std::unique_ptr;
+   using std::unordered_map;
+   
+   namespace friend_network {
+   
+   class UserMap {
+     unordered_map<string, unique_ptr<User>> name_to_user;
+   
+   public:
+     auto operator[](const string &name) -> User &;
+     auto to_json() -> json;
+   };
+   
+   }  // namespace friend_network
+   
+   #endif

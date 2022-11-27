@@ -1,0 +1,51 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_FriendsTaskHandler.h:
+
+Program Listing for File FriendsTaskHandler.h
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_TaskHandler_FriendsTaskHandler.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/TaskHandler/FriendsTaskHandler.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef FRIENDS_TASK_HANDLER_H
+   #define FRIENDS_TASK_HANDLER_H
+   
+   #include <memory>
+   
+   #include <unordered_map>
+   
+   #include "FileLineIterator/FileLineIterator.h"
+   #include "User/User.h"
+   #include "User/UserMap.h"
+   #include "Utils/TypeDefinitions.h"
+   
+   using std::shared_ptr;
+   using std::string;
+   
+   namespace friend_network {
+   
+   class FriendsTaskHandler {
+   private:
+     shared_ptr<FileLineIterator> file_iterator;
+     shared_ptr<UserMap> name_to_user;
+   
+   public:
+     FriendsTaskHandler(
+       shared_ptr<FileLineIterator> _file_iterator,
+       shared_ptr<UserMap> _name_to_user
+     );
+     auto read_and_process_tasks() -> void;
+   
+   private:
+     auto make_friends(const string &user1, const string &user2) -> void;
+     auto del_friends(const string &user1, const string &user2) -> void;
+     auto update_inventory(const string &user, const u64 timestamp, json &values)
+       -> void;
+   };
+   
+   }  // namespace friend_network
+   
+   #endif

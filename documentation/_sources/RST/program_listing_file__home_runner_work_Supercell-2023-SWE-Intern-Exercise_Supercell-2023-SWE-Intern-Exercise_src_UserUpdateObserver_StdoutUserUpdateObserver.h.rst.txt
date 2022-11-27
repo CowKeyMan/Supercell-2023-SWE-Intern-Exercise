@@ -1,0 +1,33 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_StdoutUserUpdateObserver.h:
+
+Program Listing for File StdoutUserUpdateObserver.h
+===================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_UserUpdateObserver_StdoutUserUpdateObserver.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/UserUpdateObserver/StdoutUserUpdateObserver.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef STDOUT_USER_UPDATE_OBSERVER_H
+   #define STDOUT_USER_UPDATE_OBSERVER_H
+   
+   #include <iostream>
+   
+   #include "User/User.h"
+   #include "Utils/ObserverPattern.h"
+   
+   using design_utils::Observer;
+   using std::cout;
+   
+   namespace friend_network {
+   
+   class StdoutUserUpdateObserver: public Observer<json> {
+   public:
+     void update(const json &data) override { cout << data << '\n'; };
+   };
+   
+   }  // namespace friend_network
+   
+   #endif

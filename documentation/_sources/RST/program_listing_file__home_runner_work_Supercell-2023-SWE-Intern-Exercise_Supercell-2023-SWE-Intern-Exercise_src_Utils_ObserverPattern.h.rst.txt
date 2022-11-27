@@ -1,0 +1,47 @@
+
+.. _program_listing_file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_ObserverPattern.h:
+
+Program Listing for File ObserverPattern.h
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_Supercell-2023-SWE-Intern-Exercise_Supercell-2023-SWE-Intern-Exercise_src_Utils_ObserverPattern.h>` (``/home/runner/work/Supercell-2023-SWE-Intern-Exercise/Supercell-2023-SWE-Intern-Exercise/src/Utils/ObserverPattern.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef OBSERVER_PATTERN_H
+   #define OBSERVER_PATTERN_H
+   
+   #include <memory>
+   
+   #include <unordered_set>
+   
+   using std::shared_ptr;
+   using std::unordered_set;
+   
+   namespace design_utils {
+   
+   template <class T>
+   class Observer {
+   public:
+     virtual void update(const T &data) = 0;
+     virtual ~Observer() = default;
+   };
+   
+   template <class T>
+   class Subject {
+     unordered_set<shared_ptr<Observer<T>>> observers;
+   
+   public:
+     void attach(shared_ptr<Observer<T>> observer) { observers.emplace(observer); }
+     void detach(shared_ptr<Observer<T>> observer) { observers.erase(observer); }
+     void notify_observers(T &data) {
+       for (auto &observer : observers) { update(data); }
+     }
+     virtual ~Subject() = default;
+   };
+   
+   }  // namespace design_utils
+   
+   #endif
