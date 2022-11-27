@@ -27,7 +27,7 @@ auto User::get_friends() -> const set<string> & { return friends; }
 auto User::update_values(const json &new_values, u64 timestamp) -> void {
   omp_set_lock(update_mutex);
   for (auto &[key, value] : new_values.items()) {
-    if (!values.contains(key) || (values.contains(key) && values[key].timestamp < timestamp)) {
+    if (!values.contains(key) || values[key].timestamp < timestamp) {
       values[key] = {value, timestamp};
     }
   }
@@ -44,7 +44,7 @@ auto User::update_values_notify(const json &new_values, u64 timestamp) -> void {
   omp_set_lock(update_mutex);
   json broadcast_json;
   for (auto &[key, value] : new_values.items()) {
-    if (!values.contains(key) || (values.contains(key) && values[key].timestamp < timestamp)) {
+    if (!values.contains(key) || values[key].timestamp < timestamp) {
       values[key] = {value, timestamp};
       broadcast_json["values"][key] = value;
     }

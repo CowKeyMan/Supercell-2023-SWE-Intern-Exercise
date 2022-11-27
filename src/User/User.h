@@ -6,7 +6,7 @@
  * @brief Class containing user data and functions
  */
 
-#include <map>
+#include <unordered_map>
 #include <omp.h>
 #include <set>
 #include <string>
@@ -18,7 +18,7 @@
 
 using design_utils::Observer;
 using nlohmann::json;
-using std::map;
+using std::unordered_map;
 using std::set;
 using std::string;
 
@@ -34,7 +34,7 @@ class User {
 private:
   string name;
   set<string> friends;
-  map<string, Value> values;
+  unordered_map<string, Value> values;
   omp_lock_t update_mutex_;
   omp_lock_t *update_mutex = &update_mutex_;
 
